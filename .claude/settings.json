@@ -1,0 +1,57 @@
+{
+  "extraKnownMarketplaces": {
+    "kirkova": {
+      "source": {
+        "source": "github",
+        "repo": "kirkovasports/kirkova-agent-kit"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "kirkova@kirkova": true
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)",
+      "Bash(git commit --no-verify:*)",
+      "Bash(git commit -n:*)",
+      "Bash(git push --no-verify:*)",
+      "Bash(docker system prune:*)",
+      "Bash(gh repo delete:*)"
+    ],
+    "ask": [
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(rsync:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh api -X DELETE:*)",
+      "Bash(gh api --method DELETE:*)",
+      "Bash(npm publish:*)",
+      "Bash(eas build:*)",
+      "Bash(npx eas-cli build:*)",
+      "Bash(npx eas-cli@latest build:*)",
+      "Bash(eas submit:*)"
+    ],
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git switch:*)",
+      "Bash(git fetch:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(node .kirkova/doctor.mjs:*)"
+    ]
+  }
+}

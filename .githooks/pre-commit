@@ -1,0 +1,3 @@
+#!/bin/sh
+# Kirkova pre-commit: the policy check on staged files (secrets, .env, runner policy, cross-repo reach) and Python lint. Same checks run in CI.
+exec node .kirkova/doctor.mjs --hook pre-commit

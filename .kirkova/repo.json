@@ -1,0 +1,13 @@
+{
+  "name": "models",
+  "kit": "1.0.0",
+  "role": "public: model training and evaluation code, papers, accuracy reports, training history",
+  "verify": [],
+  "consumers": [
+    "everyone (public)"
+  ],
+  "scan_ignore": [
+    "docs/papers/"
+  ],
+  "ci": false
+}

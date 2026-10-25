@@ -1,0 +1,3 @@
+#!/bin/sh
+# Kirkova pre-push: no pushes to main/master and no force-pushes (work on a branch, open a PR). Same rules the Claude Code plugin enforces.
+exec node .kirkova/doctor.mjs --hook pre-push "$@"
