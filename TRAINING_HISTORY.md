@@ -109,7 +109,7 @@ Promotion gate: challenger must beat champion by ≥ 0.005 log-loss
 **Status:** Crashed — all LGB trials failed
 
 **What happened:**
-- Set `_LGB_DEVICE = "cuda"` but LightGBM in the Docker image was not compiled with `-DUSE_CUDA=1`
+- Set `_LGB_DEVICE = "cuda"` but LightGBM in the training environment was not compiled with `-DUSE_CUDA=1`
 - Every LGB trial threw `LightGBMError: CUDA Tree Learner was not enabled in this build`
 - XGB portion completed for MLB (best_n_trees=219) but full run crashed
 - No model promoted
@@ -317,7 +317,7 @@ Champions unchanged after Run 4 — id=3 (NBA) and id=4 (MLB) still active.
 ## System changes on 2026-05-25
 
 ### Props pipeline — fully operational
-- Player prop models (LightGBM multi-quantile) now train daily at 7:55 AM EST via `train_props` Celery task
+- Player prop models (LightGBM multi-quantile) now train daily at 7:55 AM EST via a scheduled job
 - DK batter prop fetcher rewritten to use **subcategory endpoints** — category-level endpoint only returned HR milestones; H/TB/RBI/PITCHER_K/PITCHER_ER each live in separate subcategory IDs
 - Fixed player name extraction for O/U markets (market name format: "Luis Arraez Hits O/U", no participants array)
 - Fixed `"hits"` stat detection (was `" hits"` with leading space, missed "Hits O/U")
