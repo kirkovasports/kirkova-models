@@ -1,5 +1,7 @@
 # Kirkova Models
 
+<p align="center"><img src="docs/media/models.webp" alt="Kirkova Models: read the method, check the record, follow the history, tell us what is wrong" width="900"></p>
+
 The training and evaluation code behind the predictions on [kirkova.cc](https://kirkova.cc), plus our published papers, accuracy reports and the full history of every model we have trained, including the ones that did not make it.
 
 We publish this so you can check our work. Predictions are for entertainment only, not betting or financial advice, and past results do not guarantee future results.
